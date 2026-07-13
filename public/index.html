@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You &amp; Farewell | Grove</title>
+    <meta
+      name="description"
+      content="Grove is winding down. A farewell letter and a thank you from the founders."
+    />
+    <link rel="canonical" href="https://grove.city/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Thank You &amp; Farewell | Grove" />
+    <meta
+      property="og:description"
+      content="Grove is winding down. A farewell letter and a thank you from the founders."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://grove.city/" />
+    <meta property="og:image" content="https://grove.city/assets/watercolor/hero-v3.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Thank You &amp; Farewell | Grove" />
+    <meta
+      name="twitter:description"
+      content="Grove is winding down. A farewell letter and a thank you from the founders."
+    />
+    <meta name="twitter:image" content="https://grove.city/assets/watercolor/hero-v3.png" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* Grove static-page identity — mirrors /fundraising */
+        --grove-green: #389f58;
+        --grove-green-dark: #2d7a46;
+        --grove-green-light: rgba(56, 159, 88, 0.12);
+        --ink: #1a1f2e;
+        --ink-muted: #6b7280;
+        --paper-warm: #f7f6f3;
+        --border: #e5e4e0;
+        --shadow-lg: 0 8px 30px rgba(26, 31, 46, 0.08);
+        --font-display: 'Cormorant Garamond', Georgia, serif;
+        --font-body: 'DM Sans', -apple-system, sans-serif;
+        --font-mono: 'JetBrains Mono', monospace;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --space-12: 3rem;
+        --radius-lg: 16px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-body);
+        background: var(--paper-warm);
+        color: var(--ink);
+        line-height: 1.6;
+        font-size: 1rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        color: var(--grove-green-dark);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--grove-green);
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--grove-green);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .wrap {
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 var(--space-6);
+      }
+
+      .kicker {
+        font-family: var(--font-mono);
+        font-size: 0.8125rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--grove-green-dark);
+      }
+
+      /* ============ THE LETTER ============ */
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding: var(--space-8) 0;
+      }
+
+      .letter {
+        max-width: 1160px;
+        margin: 0 auto;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+        padding: clamp(var(--space-8), 4vw, var(--space-12));
+      }
+
+      .letter-logo {
+        display: block;
+        width: 44px;
+        height: 44px;
+        margin: 0 auto var(--space-4);
+      }
+
+      .letter .kicker {
+        display: block;
+        text-align: center;
+        margin-bottom: var(--space-8);
+      }
+
+      /* Two columns on desktop so the whole letter fits one screen */
+      .letter-body {
+        columns: 2;
+        column-gap: var(--space-12);
+      }
+
+      .letter p {
+        font-family: var(--font-display);
+        font-size: 1.1875rem;
+        font-weight: 500;
+        line-height: 1.55;
+        color: var(--ink);
+        text-wrap: pretty;
+      }
+
+      /* Links read as ink with a green underline so the prose isn't a wall of
+         green, and colorblind readers get a shape cue, not just a hue. */
+      .letter-body a,
+      .letter .kicker a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: var(--grove-green);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      .letter-body a:hover,
+      .letter .kicker a:hover {
+        color: var(--grove-green-dark);
+      }
+
+      .letter p + p {
+        margin-top: var(--space-4);
+      }
+
+      .signatures {
+        margin-top: var(--space-6);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        break-inside: avoid;
+      }
+
+      .signature {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+      }
+
+      .signature img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid var(--border);
+      }
+
+      .signature-name {
+        font-weight: 600;
+        font-size: 0.9375rem;
+        line-height: 1.3;
+      }
+
+      .signature-role {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--ink-muted);
+      }
+
+      @media (max-width: 900px) {
+        .letter-body {
+          columns: 1;
+        }
+        .letter p {
+          font-size: 1.25rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        main {
+          padding: var(--space-8) 0;
+        }
+        .wrap {
+          padding: 0 var(--space-4);
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .letter {
+          border: none;
+          box-shadow: none;
+          border-radius: 0;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="wrap">
+        <div class="letter">
+          <img src="/assets/logos/logomark.svg" alt="" class="letter-logo" />
+          <h1 class="kicker">
+            A farewell from Grove, the original team behind
+            <a href="https://pocket.network" target="_blank" rel="noopener noreferrer"
+              >Pocket&nbsp;Network</a
+            >
+          </h1>
+          <div class="letter-body">
+            <p>
+              Grove is winding down. After nine years, this is goodbye, and a thank you for
+              everything we built together.
+            </p>
+            <p>
+              We began as
+              <a
+                href="https://medium.com/decentralized-infrastructure/pocket-network-inc-rebrands-to-grove-858e1880ca4a"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pocket Network Inc.</a
+              >, founded in 2017 by
+              <a href="https://morourke.org/" target="_blank" rel="noopener noreferrer"
+                >Michael O&rsquo;Rourke</a
+              >,
+              <a
+                href="https://www.linkedin.com/in/valeria-benitez-florez-ba1070b7/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Valeria Benitez Florez</a
+              >,
+              <a
+                href="https://www.linkedin.com/in/pabelnunezlandestoy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pabel Nunez</a
+              >, and
+              <a
+                href="https://www.linkedin.com/in/luis-ramon-correa-de-leon-88380119/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Luis de Leon</a
+              >. Over a hundred amazing people passed through the company along the way, and their
+              work fills more than 250 open-source repositories across the
+              <a href="https://github.com/pokt-network" target="_blank" rel="noopener noreferrer"
+                >Pocket Network</a
+              >
+              and
+              <a href="https://github.com/buildwithgrove" target="_blank" rel="noopener noreferrer"
+                >Grove</a
+              >
+              GitHub organizations.
+            </p>
+            <p>
+              Together we built two versions of the
+              <a
+                href="https://docs.pocket.network/protocol/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pocket Network protocol</a
+              >
+              and its first gateway, the Grove Portal, which settled more than a trillion requests
+              across 60+ blockchains. Pocket Network continues on, permissionless by design and
+              stewarded by the
+              <a href="https://pocket.network" target="_blank" rel="noopener noreferrer"
+                >Pocket Network Foundation</a
+              >.
+            </p>
+            <p>
+              In 2026 we
+              <a
+                href="https://medium.com/decentralized-infrastructure/groves-next-chapter-moving-up-the-stack-fd7ecaf0a184"
+                target="_blank"
+                rel="noopener noreferrer"
+                >moved up the stack</a
+              >, and bet that money, not hyperlinks, was the internet&rsquo;s best quality signal.
+              We built a platform for humans and agents to pay creators directly, and became one of
+              the first adopters of
+              <a href="https://www.x402.org/" target="_blank" rel="noopener noreferrer">x402</a>,
+              the open payment protocol for the internet. In five months, nearly a thousand fans
+              paid over 400 creators more than 6,000 times for their content. You proved quality
+              is&nbsp;worth&nbsp;paying&nbsp;for.
+            </p>
+            <p>
+              To our partners, our investors, our teammates past and present, and the Pocket Network
+              community we grew up in: thank you for betting on us, twice.
+            </p>
+            <p>
+              The ideas don&rsquo;t retire with the company. Our code stays open source, and the
+              thesis stands: the agentic internet will need a way to pay humans for genuine,
+              tasteful content.
+            </p>
+            <div class="signatures">
+              <p style="font-style: italic">With gratitude,</p>
+              <div class="signature">
+                <img src="/fundraising/images/arthur.jpg" alt="Arthur Sabintsev" />
+                <div>
+                  <div class="signature-name">
+                    <a href="https://sabintsev.com" target="_blank" rel="noopener noreferrer"
+                      >Arthur Sabintsev</a
+                    >
+                  </div>
+                  <div class="signature-role">CEO</div>
+                </div>
+              </div>
+              <div class="signature">
+                <img src="/fundraising/images/fred.jpg" alt="Fred Teumer" />
+                <div>
+                  <div class="signature-name">
+                    <a href="https://fredt.io" target="_blank" rel="noopener noreferrer"
+                      >Fred Teumer</a
+                    >
+                  </div>
+                  <div class="signature-role">CIO</div>
+                </div>
+              </div>
+              <div class="signature">
+                <img src="/fundraising/images/daniel.jpg" alt="Daniel Olshansky" />
+                <div>
+                  <div class="signature-name">
+                    <a href="https://olshansky.info" target="_blank" rel="noopener noreferrer"
+                      >Daniel Olshansky</a
+                    >
+                  </div>
+                  <div class="signature-role">CTO</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
